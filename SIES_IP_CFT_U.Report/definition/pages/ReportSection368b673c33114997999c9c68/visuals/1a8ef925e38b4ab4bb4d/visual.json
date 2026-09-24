@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "1a8ef925e38b4ab4bb4d",
+  "position": {
+    "x": 650,
+    "y": 310,
+    "z": 4750,
+    "height": 380,
+    "width": 610,
+    "tabOrder": 4750
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAnio"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              },
+              "queryRef": "DimAnio.Año",
+              "nativeQueryRef": "Año",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlan"
+                    }
+                  },
+                  "Property": "Grupo de plan"
+                }
+              },
+              "queryRef": "DimPlan.Grupo de plan",
+              "nativeQueryRef": "Grupo de plan",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlan"
+                    }
+                  },
+                  "Property": "Subgrupo de plan"
+                }
+              },
+              "queryRef": "DimPlan.Subgrupo de plan",
+              "nativeQueryRef": "Subgrupo de plan",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total",
+              "nativeQueryRef": "Matrícula total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

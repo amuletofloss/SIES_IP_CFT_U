@@ -1,0 +1,55 @@
+/// Dimensión para filtrar y describir DimPlan.
+table DimPlan
+	lineageTag: ad3bdc62-aa1d-40ee-ac52-2360d44f8564
+
+	column 'Tipo de plan'
+		dataType: string
+		lineageTag: 17c0ec71-0fe2-4d03-8476-cb42154f12d4
+		summarizeBy: none
+		sourceColumn: TipoPlan
+		sortByColumn: 'Orden subgrupo de plan'
+
+	column 'Grupo de plan'
+		dataType: string
+		lineageTag: 553efcd0-81ad-4599-b1a4-6cbdd00eaaa7
+		summarizeBy: none
+		sourceColumn: GrupoPlan
+		sortByColumn: 'Orden grupo de plan'
+
+	column 'Subgrupo de plan'
+		dataType: string
+		lineageTag: 1acbcec5-73a5-41d3-b056-9b0207df9de8
+		summarizeBy: none
+		sourceColumn: SubgrupoPlan
+		sortByColumn: 'Orden subgrupo de plan'
+
+	column 'Orden grupo de plan'
+		dataType: int64
+		isHidden
+		lineageTag: 5fe5f9f5-9410-46e3-ae95-faa64e559f6d
+		summarizeBy: none
+		sourceColumn: OrdenGrupoPlan
+
+	column 'Orden subgrupo de plan'
+		dataType: int64
+		isHidden
+		lineageTag: 58f9b76f-3b72-475e-93aa-ed1b3b03044a
+		summarizeBy: none
+		sourceColumn: OrdenSubgrupoPlan
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\dim_plan.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"TipoPlan", type text},
+					{"GrupoPlan", type text},
+					{"SubgrupoPlan", type text},
+					{"OrdenGrupoPlan", Int64.Type},
+					{"OrdenSubgrupoPlan", Int64.Type}
+					}, "es-CL")
+				in
+					Typed
+

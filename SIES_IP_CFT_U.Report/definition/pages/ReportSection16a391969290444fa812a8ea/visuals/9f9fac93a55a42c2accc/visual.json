@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "9f9fac93a55a42c2accc",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 540,
+    "width": 780,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAnio"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              },
+              "queryRef": "DimAnio.Año",
+              "nativeQueryRef": "Año",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Regular Total"
+                }
+              },
+              "queryRef": "_Medidas.Regular Total",
+              "nativeQueryRef": "Regular Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad Total"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad Total",
+              "nativeQueryRef": "Continuidad Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Otros Total"
+                }
+              },
+              "queryRef": "_Medidas.Otros Total",
+              "nativeQueryRef": "Otros Total"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

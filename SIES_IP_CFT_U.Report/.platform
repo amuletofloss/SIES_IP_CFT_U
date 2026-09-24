@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SIES IP CFT U"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1f368b5e-4930-4c87-b8c0-aa205565901a"
+  }
+}

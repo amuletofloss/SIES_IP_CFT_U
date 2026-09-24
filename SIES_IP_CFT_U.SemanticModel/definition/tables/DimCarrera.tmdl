@@ -1,0 +1,78 @@
+/// Dimensión para filtrar y describir DimCarrera.
+table DimCarrera
+	lineageTag: d12021b9-91bd-4ccb-8e08-21896f3d04fd
+
+	column 'Carrera Key'
+		dataType: string
+		lineageTag: 27e2b37d-a787-4dd1-bc67-3fc479942dfd
+		summarizeBy: none
+		sourceColumn: CarreraKey
+
+	column 'Código carrera'
+		dataType: string
+		lineageTag: fdee7a99-d2a4-4063-8ea8-5b46839ee86e
+		summarizeBy: none
+		sourceColumn: CarreraID
+
+	column Carrera
+		dataType: string
+		lineageTag: 07fbb865-6532-443b-9ad8-bea45d98421d
+		summarizeBy: none
+		sourceColumn: Carrera
+
+	column 'Área del conocimiento'
+		dataType: string
+		lineageTag: bcb8ff5e-a4e3-40a2-b434-2799d9f9a2be
+		summarizeBy: none
+		sourceColumn: AreaConocimiento
+
+	column 'CINE-F 2013 área'
+		dataType: string
+		lineageTag: 4196d616-cf2c-491b-b3ca-9683745844fd
+		summarizeBy: none
+		sourceColumn: Cine2013Area
+
+	column 'CINE-F 2013 subárea'
+		dataType: string
+		lineageTag: fc0553e1-8d84-444c-bb6d-b4d304879dd5
+		summarizeBy: none
+		sourceColumn: Cine2013Subarea
+
+	column 'Clasificación carrera nivel 1'
+		dataType: string
+		lineageTag: 61737b2b-1ad9-4adb-b3a1-19a981865afa
+		summarizeBy: none
+		sourceColumn: ClasificacionCarrera1
+
+	column 'Clasificación carrera nivel 2'
+		dataType: string
+		lineageTag: 61b72596-6f3f-4a47-847c-d2f630bde56d
+		summarizeBy: none
+		sourceColumn: ClasificacionCarrera2
+
+	column 'Acreditación carrera'
+		dataType: string
+		lineageTag: 5a407289-2b16-4b37-8c9e-c851356f03b4
+		summarizeBy: none
+		sourceColumn: AcreditacionCarrera
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\dim_carrera.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"CarreraKey", type text},
+					{"CarreraID", type text},
+					{"Carrera", type text},
+					{"AreaConocimiento", type text},
+					{"Cine2013Area", type text},
+					{"Cine2013Subarea", type text},
+					{"ClasificacionCarrera1", type text},
+					{"ClasificacionCarrera2", type text},
+					{"AcreditacionCarrera", type text}
+					}, "es-CL")
+				in
+					Typed
+

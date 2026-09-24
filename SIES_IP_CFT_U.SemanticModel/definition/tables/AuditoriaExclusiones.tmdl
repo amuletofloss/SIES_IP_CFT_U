@@ -1,0 +1,64 @@
+/// Auditoría de instituciones-año excluidas por la regla de consistencia.
+table AuditoriaExclusiones
+	lineageTag: 0338ad98-9cbd-4193-973f-929a2c544d91
+
+	column Año
+		dataType: int64
+		lineageTag: ae015466-0419-4aee-bc64-47c9523f3510
+		summarizeBy: none
+		sourceColumn: Anio
+
+	column 'Institución ID'
+		dataType: int64
+		lineageTag: 82fa9e5a-cd39-4082-810b-03ce289fbd9a
+		summarizeBy: none
+		sourceColumn: InstitucionID
+
+	column Institución
+		dataType: string
+		lineageTag: dad47e7f-e2fb-416d-80a8-754b01b4570b
+		summarizeBy: none
+		sourceColumn: Institucion
+
+	column 'Matrícula total'
+		dataType: int64
+		lineageTag: fcad886a-5c05-4739-8790-ee3942d0e616
+		summarizeBy: none
+		sourceColumn: Total
+
+	column 'Matrícula primer año'
+		dataType: int64
+		lineageTag: 1c097e51-ce62-49e9-a1a2-5c2205516f65
+		summarizeBy: none
+		sourceColumn: PrimerAnio
+
+	column 'Matrícula en Plan Regular o Especial'
+		dataType: int64
+		lineageTag: 72941cb0-58ca-4256-aa9d-3a413563a190
+		summarizeBy: none
+		sourceColumn: MatriculaP1Observable
+
+	column Motivo
+		dataType: string
+		lineageTag: f76d7be3-7a02-49bf-90fd-abdd48e7f44e
+		summarizeBy: none
+		sourceColumn: Motivo
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\auditoria_exclusiones.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"Anio", Int64.Type},
+					{"InstitucionID", Int64.Type},
+					{"Institucion", type text},
+					{"Total", Int64.Type},
+					{"PrimerAnio", Int64.Type},
+					{"MatriculaP1Observable", Int64.Type},
+					{"Motivo", type text}
+					}, "es-CL")
+				in
+					Typed
+

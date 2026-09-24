@@ -1,0 +1,105 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "c6cf2b25b6fe4022a136",
+  "position": {
+    "x": 20,
+    "y": 310,
+    "z": 4120,
+    "height": 380,
+    "width": 720,
+    "tabOrder": 4120
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Grupo institución"
+                }
+              },
+              "queryRef": "DimInstitucion.Grupo institución",
+              "nativeQueryRef": "Grupo institución",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año IP+CFT",
+              "nativeQueryRef": "Matrícula primer año IP+CFT"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Matrícula primer año IP+CFT"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7071ba40a8d068d0490e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimInstitucion"
+              }
+            },
+            "Property": "Grupo institución"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c4b8fdca0aca3b0e7376",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Matrícula primer año IP+CFT"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

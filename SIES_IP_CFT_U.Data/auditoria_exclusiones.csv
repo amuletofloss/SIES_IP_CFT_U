@@ -1,0 +1,51 @@
+﻿Anio,InstitucionID,Institucion,Total,PrimerAnio,MatriculaP1Observable,Motivo
+2023,7,UNIVERSIDAD BOLIVARIANA,528,0.0,28,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,54,UNIVERSIDAD TECNOLOGICA DE CHILE INACAP,403,0.0,403,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,83,UNIVERSIDAD DE PLAYA ANCHA DE CIENCIAS DE LA EDUCACION,1,0.0,1,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,84,UNIVERSIDAD DE LOS LAGOS,4,0.0,4,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,100,IP INACAP,240,0.0,240,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,101,IP LIBERTADOR DE LOS ANDES,105,0.0,105,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,103,IP INSTITUTO DE ESTUDIOS BANCARIOS GUILLERMO SUBERCASEAUX,368,0.0,368,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,132,IP ESUCOMEX,6,0.0,6,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,170,IP DE CIENCIAS DE LA COMPUTACION ACUARIO DATA,64,0.0,64,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,214,CFT INSTITUTO CENTRAL DE CAPACITACION EDUCACIONAL ICCE,937,0.0,937,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,236,CFT CENTRO TECNOLOGICO SUPERIOR INFOMED,23,0.0,23,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,257,CFT JUAN BOHON,18,0.0,18,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,319,CFT PRODATA,94,0.0,94,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2023,691,CFT PROFASOC,28,0.0,28,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,7,UNIVERSIDAD BOLIVARIANA,243,0.0,3,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,16,UNIVERSIDAD LA REPUBLICA,77,0.0,63,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,46,UNIVERSIDAD DE ACONCAGUA,2203,0.0,164,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,54,UNIVERSIDAD TECNOLOGICA DE CHILE INACAP,195,0.0,195,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,89,PONTIFICIA UNIVERSIDAD CATOLICA DE VALPARAISO,33,0.0,33,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,93,UNIVERSIDAD CATOLICA DE LA SANTISIMA CONCEPCION,345,0.0,38,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,100,IP INACAP,270,0.0,270,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,103,IP INSTITUTO DE ESTUDIOS BANCARIOS GUILLERMO SUBERCASEAUX,157,0.0,157,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,132,IP ESUCOMEX,1,0.0,1,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,170,IP DE CIENCIAS DE LA COMPUTACION ACUARIO DATA,70,0.0,70,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,236,CFT CENTRO TECNOLOGICO SUPERIOR INFOMED,12,0.0,12,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,257,CFT JUAN BOHON,3,0.0,3,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2024,426,CFT ESCUELA DE COMERCIO,420,0.0,420,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,7,UNIVERSIDAD BOLIVARIANA,186,0.0,5,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,16,UNIVERSIDAD LA REPUBLICA,31,0.0,30,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,46,UNIVERSIDAD DE ACONCAGUA,1414,0.0,39,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,54,UNIVERSIDAD TECNOLOGICA DE CHILE INACAP,52,0.0,52,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,72,UNIVERSIDAD DE VALPARAISO,4,0.0,4,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,84,UNIVERSIDAD DE LOS LAGOS,1,0.0,1,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,93,UNIVERSIDAD CATOLICA DE LA SANTISIMA CONCEPCION,431,0.0,11,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,101,IP LIBERTADOR DE LOS ANDES,4,0.0,4,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,103,IP INSTITUTO DE ESTUDIOS BANCARIOS GUILLERMO SUBERCASEAUX,64,0.0,64,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,120,IP DIEGO PORTALES,2039,0.0,2039,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,176,IP DEL VALLE CENTRAL,1498,0.0,1224,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,214,CFT INSTITUTO CENTRAL DE CAPACITACION EDUCACIONAL ICCE,493,0.0,493,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,426,CFT ESCUELA DE COMERCIO,65,0.0,65,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,534,CFT ASISTE,323,0.0,323,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2025,633,CFT TEODORO WICKEL KLUWEN,10,0.0,10,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,7,UNIVERSIDAD BOLIVARIANA,83,0.0,1,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,46,UNIVERSIDAD DE ACONCAGUA,667,0.0,18,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,84,UNIVERSIDAD DE LOS LAGOS,2,0.0,2,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,101,IP LIBERTADOR DE LOS ANDES,4,0.0,4,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,176,IP DEL VALLE CENTRAL,768,0.0,652,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,214,CFT INSTITUTO CENTRAL DE CAPACITACION EDUCACIONAL ICCE,203,0.0,203,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,426,CFT ESCUELA DE COMERCIO,17,0.0,17,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial
+2026,534,CFT ASISTE,227,0.0,227,Se excluye: primer año es cero y existe matrícula en Plan Regular o Plan Especial

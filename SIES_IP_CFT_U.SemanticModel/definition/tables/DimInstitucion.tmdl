@@ -1,0 +1,82 @@
+/// Dimensión para filtrar y describir DimInstitucion.
+table DimInstitucion
+	lineageTag: 03da2bb8-c7c0-45a7-a140-1b6c95c3f11a
+
+	column 'Institución ID'
+		dataType: int64
+		lineageTag: 799af5a9-8af8-458f-ae41-6178383f8d0d
+		summarizeBy: none
+		sourceColumn: InstitucionID
+
+	column Institución
+		dataType: string
+		lineageTag: e037c563-fb44-4114-9f29-a9b802a1ee18
+		summarizeBy: none
+		sourceColumn: Institucion
+
+	column 'Grupo institución'
+		dataType: string
+		lineageTag: 05156c96-f700-42f7-b231-4113532cc780
+		summarizeBy: none
+		sourceColumn: GrupoInstitucion
+
+	column 'Tipo institución'
+		dataType: string
+		lineageTag: b9f262c6-2890-47c6-8ea4-0ed2335fc796
+		summarizeBy: none
+		sourceColumn: TipoInstitucion
+
+	column 'Clasificación nivel 2'
+		dataType: string
+		lineageTag: ff796719-8892-4e81-90f2-23cc4b5da63c
+		summarizeBy: none
+		sourceColumn: ClasificacionInstitucion2
+
+	column 'Clasificación nivel 3'
+		dataType: string
+		lineageTag: 549000d6-e9ee-453b-bc63-b78b439d12cc
+		summarizeBy: none
+		sourceColumn: ClasificacionInstitucion3
+
+	column 'Acreditación institucional'
+		dataType: string
+		lineageTag: 5061a3c6-f92d-4c4e-a33e-760cf313f86c
+		summarizeBy: none
+		sourceColumn: AcreditacionInstitucional
+
+	column 'Segmento competitivo'
+		dataType: string
+		lineageTag: 95bbac28-74b3-4383-a55b-fe0a883c9028
+		summarizeBy: none
+		sourceColumn: SegmentoCompetitivo
+
+	hierarchy 'Grupo > institución'
+		lineageTag: 2e3fc396-ea1e-438b-95c3-56cf2e35fd42
+
+		level Grupo
+			lineageTag: 318140fd-8022-47f3-b19f-e324d9a843b0
+			column: 'Grupo institución'
+
+		level Institución
+			lineageTag: f7f12e9d-8c23-49be-a578-6401a685cd9e
+			column: Institución
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\dim_institucion.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"InstitucionID", Int64.Type},
+					{"Institucion", type text},
+					{"GrupoInstitucion", type text},
+					{"TipoInstitucion", type text},
+					{"ClasificacionInstitucion2", type text},
+					{"ClasificacionInstitucion3", type text},
+					{"AcreditacionInstitucional", type text},
+					{"SegmentoCompetitivo", type text}
+					}, "es-CL")
+				in
+					Typed
+

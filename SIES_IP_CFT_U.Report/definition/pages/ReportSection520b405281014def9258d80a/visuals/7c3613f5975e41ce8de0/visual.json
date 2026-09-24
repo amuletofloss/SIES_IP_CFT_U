@@ -1,0 +1,120 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "7c3613f5975e41ce8de0",
+  "position": {
+    "x": 760,
+    "y": 310,
+    "z": 4860,
+    "height": 380,
+    "width": 500,
+    "tabOrder": 4860
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Grupo institución"
+                }
+              },
+              "queryRef": "DimInstitucion.Grupo institución",
+              "nativeQueryRef": "Grupo institución",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total IP+CFT",
+              "nativeQueryRef": "Matrícula total IP+CFT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año IP+CFT",
+              "nativeQueryRef": "Matrícula primer año IP+CFT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Participación P1"
+                }
+              },
+              "queryRef": "_Medidas.Participación P1",
+              "nativeQueryRef": "Participación P1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Variación P1 interanual"
+                }
+              },
+              "queryRef": "_Medidas.Variación P1 interanual",
+              "nativeQueryRef": "Variación P1 interanual"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

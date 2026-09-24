@@ -1,0 +1,21 @@
+# Archivos locales generados para abrir y actualizar el PBIP
+.local/
+
+# Caché y configuración local de Power BI
+**/.pbi/
+
+# Binarios: se distribuyen mediante GitHub Releases
+*.pbix
+
+# Temporales y recuperación
+*.bak
+*.tmp
+*.temp
+~$*
+*.autosave
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

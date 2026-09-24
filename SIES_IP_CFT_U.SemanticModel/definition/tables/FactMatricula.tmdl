@@ -1,0 +1,107 @@
+/// Tabla de hechos SIES al grano carrera-sede-modalidad-jornada-plan.
+table FactMatricula
+	lineageTag: 57e58b8b-52f8-4733-8688-85d525f47d97
+
+	column Año
+		dataType: int64
+		isHidden
+		lineageTag: cf8d856c-2939-4e2d-8faa-bee1d6e69a86
+		summarizeBy: none
+		sourceColumn: Anio
+
+	column 'Institución ID'
+		dataType: int64
+		isHidden
+		lineageTag: ea5fb236-cffb-426b-9389-2ff25a622e32
+		summarizeBy: none
+		sourceColumn: InstitucionID
+
+	column 'Carrera Key'
+		dataType: string
+		isHidden
+		lineageTag: e6dcced2-7092-4482-b6a4-d8ccfe92271c
+		summarizeBy: none
+		sourceColumn: CarreraKey
+
+	column Modalidad
+		dataType: string
+		isHidden
+		lineageTag: 913f83e1-6c42-476a-a99e-1e70f30b6f89
+		summarizeBy: none
+		sourceColumn: Modalidad
+
+	column Jornada
+		dataType: string
+		isHidden
+		lineageTag: 024bf671-eb68-43ee-bf28-7727dfe1d949
+		summarizeBy: none
+		sourceColumn: Jornada
+
+	column 'Tipo de plan'
+		dataType: string
+		isHidden
+		lineageTag: a78f74c5-7f94-4cad-a065-4995dbea96cf
+		summarizeBy: none
+		sourceColumn: TipoPlan
+
+	column Región
+		dataType: string
+		lineageTag: 0f735317-4cdd-41ea-a7fd-523f16b313fa
+		summarizeBy: none
+		sourceColumn: Region
+
+	column Provincia
+		dataType: string
+		lineageTag: 5e1e5a30-c320-4eb3-b9b0-a099d340a042
+		summarizeBy: none
+		sourceColumn: Provincia
+
+	column Comuna
+		dataType: string
+		lineageTag: 2031fc5f-e6b5-48ef-9385-cd31fe1707a4
+		summarizeBy: none
+		sourceColumn: Comuna
+
+	column Sede
+		dataType: string
+		lineageTag: 0ca3aef1-f38e-49e7-9f91-09de1481e331
+		summarizeBy: none
+		sourceColumn: Sede
+
+	column 'Matrícula total'
+		dataType: int64
+		isHidden
+		lineageTag: 6cbb2069-6296-4278-b343-d96bfe5d2352
+		summarizeBy: none
+		sourceColumn: TotalMatricula
+
+	column 'Matrícula primer año'
+		dataType: int64
+		isHidden
+		lineageTag: c3d7445c-b8cd-405a-bac8-abed4ef2e0ac
+		summarizeBy: none
+		sourceColumn: PrimerAnio
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\fact_matricula.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"Anio", Int64.Type},
+					{"InstitucionID", Int64.Type},
+					{"CarreraKey", type text},
+					{"Modalidad", type text},
+					{"Jornada", type text},
+					{"TipoPlan", type text},
+					{"Region", type text},
+					{"Provincia", type text},
+					{"Comuna", type text},
+					{"Sede", type text},
+					{"TotalMatricula", Int64.Type},
+					{"PrimerAnio", Int64.Type}
+					}, "es-CL")
+				in
+					Typed
+

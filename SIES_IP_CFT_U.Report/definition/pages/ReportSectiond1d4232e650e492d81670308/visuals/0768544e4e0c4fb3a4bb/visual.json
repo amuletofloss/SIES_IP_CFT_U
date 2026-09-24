@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "0768544e4e0c4fb3a4bb",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 140,
+    "width": 1240,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total universidades"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total universidades",
+              "nativeQueryRef": "Matrícula total universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año universidades"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año universidades",
+              "nativeQueryRef": "Matrícula primer año universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad Total universidades"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad Total universidades",
+              "nativeQueryRef": "Continuidad Total universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad 1er año universidades"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad 1er año universidades",
+              "nativeQueryRef": "Continuidad 1er año universidades"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

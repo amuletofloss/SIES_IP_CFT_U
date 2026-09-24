@@ -1,0 +1,57 @@
+/// Glosario visible del informe.
+table Glosario
+	lineageTag: aa96ef7f-350d-44cc-9c0a-540db1a5de29
+
+	column Término
+		dataType: string
+		lineageTag: 782c5c98-6cd7-4a24-88ce-7a8c4be0f911
+		summarizeBy: none
+		sourceColumn: Termino
+
+	column Definición
+		dataType: string
+		lineageTag: b2419cdc-8d22-4aef-90f3-439fbdacdafc
+		summarizeBy: none
+		sourceColumn: Definicion
+
+	column 'Fórmula / regla'
+		dataType: string
+		lineageTag: e3588938-1064-44aa-88b1-9a4f835238a7
+		summarizeBy: none
+		sourceColumn: FormulaRegla
+
+	column Fuente
+		dataType: string
+		lineageTag: 5e4b7a15-23f4-4502-bcc1-e393a9855910
+		summarizeBy: none
+		sourceColumn: Fuente
+
+	column Advertencia
+		dataType: string
+		lineageTag: a42ac3d9-a71e-456f-b2c1-0a0881bc54f0
+		summarizeBy: none
+		sourceColumn: Advertencia
+
+	column 'Integrantes base 2026'
+		dataType: string
+		lineageTag: 0a1a428d-0a8c-4849-9d1f-7bc7e97a83f1
+		summarizeBy: none
+		sourceColumn: IntegrantesBase2026
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\glosario.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"Termino", type text},
+					{"Definicion", type text},
+					{"FormulaRegla", type text},
+					{"Fuente", type text},
+					{"Advertencia", type text},
+					{"IntegrantesBase2026", type text}
+					}, "es-CL")
+				in
+					Typed
+

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "b0c5d5458a064c2ca616",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 540,
+    "width": 720,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarrera"
+                    }
+                  },
+                  "Property": "Área del conocimiento"
+                }
+              },
+              "queryRef": "DimCarrera.Área del conocimiento",
+              "nativeQueryRef": "Área del conocimiento",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

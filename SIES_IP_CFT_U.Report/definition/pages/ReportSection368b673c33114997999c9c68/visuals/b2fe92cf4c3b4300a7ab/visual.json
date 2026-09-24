@@ -1,0 +1,70 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "b2fe92cf4c3b4300a7ab",
+  "position": {
+    "x": 20,
+    "y": 310,
+    "z": 4120,
+    "height": 380,
+    "width": 610,
+    "tabOrder": 4120
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlan"
+                    }
+                  },
+                  "Property": "Grupo de plan"
+                }
+              },
+              "queryRef": "DimPlan.Grupo de plan",
+              "nativeQueryRef": "Grupo de plan",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total",
+              "nativeQueryRef": "Matrícula total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

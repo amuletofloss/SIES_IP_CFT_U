@@ -1,0 +1,22 @@
+/// Dimensión para filtrar y describir DimJornada.
+table DimJornada
+	lineageTag: 4b7cf675-30a0-4fdb-93b5-ccdcfc293fba
+
+	column Jornada
+		dataType: string
+		lineageTag: b7a9c721-eff4-494d-a66a-be4ef1695b1d
+		summarizeBy: none
+		sourceColumn: Jornada
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\dim_jornada.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"Jornada", type text}
+					}, "es-CL")
+				in
+					Typed
+

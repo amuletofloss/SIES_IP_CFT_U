@@ -1,0 +1,20 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table FactMatricula
+ref table DimAnio
+ref table DimInstitucion
+ref table DimCarrera
+ref table DimModalidad
+ref table DimJornada
+ref table DimPlan
+ref table _Medidas
+ref table Glosario
+ref table AuditoriaExclusiones
+ref table ClasificacionCompetitiva
+

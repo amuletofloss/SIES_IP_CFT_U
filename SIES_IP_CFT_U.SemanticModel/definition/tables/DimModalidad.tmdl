@@ -1,0 +1,22 @@
+/// Dimensión para filtrar y describir DimModalidad.
+table DimModalidad
+	lineageTag: 7c56866d-511a-475c-9155-73f5702a5fc6
+
+	column Modalidad
+		dataType: string
+		lineageTag: 634bdb86-d3b9-47b4-b820-62df194f8d01
+		summarizeBy: none
+		sourceColumn: Modalidad
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\dim_modalidad.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"Modalidad", type text}
+					}, "es-CL")
+				in
+					Typed
+

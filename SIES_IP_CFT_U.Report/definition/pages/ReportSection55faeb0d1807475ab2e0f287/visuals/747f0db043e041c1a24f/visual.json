@@ -1,0 +1,140 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "747f0db043e041c1a24f",
+  "position": {
+    "x": 660,
+    "y": 150,
+    "z": 3160,
+    "height": 540,
+    "width": 600,
+    "tabOrder": 3160
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlan"
+                    }
+                  },
+                  "Property": "Grupo de plan"
+                }
+              },
+              "queryRef": "DimPlan.Grupo de plan",
+              "nativeQueryRef": "Grupo de plan",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Segmento competitivo"
+                }
+              },
+              "queryRef": "DimInstitucion.Segmento competitivo",
+              "nativeQueryRef": "Segmento competitivo",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Grupo institución"
+                }
+              },
+              "queryRef": "DimInstitucion.Grupo institución",
+              "nativeQueryRef": "Grupo institución",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total",
+              "nativeQueryRef": "Matrícula total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Participación P1"
+                }
+              },
+              "queryRef": "_Medidas.Participación P1",
+              "nativeQueryRef": "Participación P1"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

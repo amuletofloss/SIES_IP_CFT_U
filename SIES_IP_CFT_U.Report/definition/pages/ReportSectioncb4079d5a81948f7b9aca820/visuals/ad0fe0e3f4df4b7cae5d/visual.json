@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "ad0fe0e3f4df4b7cae5d",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 140,
+    "width": 1240,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ECS matrícula total"
+                }
+              },
+              "queryRef": "_Medidas.ECS matrícula total",
+              "nativeQueryRef": "ECS matrícula total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ECS matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.ECS matrícula primer año",
+              "nativeQueryRef": "ECS matrícula primer año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Participación ECS P1 IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.Participación ECS P1 IP+CFT",
+              "nativeQueryRef": "Participación ECS P1 IP+CFT"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

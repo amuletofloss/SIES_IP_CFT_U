@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "1b5a2c6fd77d4a9d877b",
+  "position": {
+    "x": 260,
+    "y": 150,
+    "z": 2760,
+    "height": 250,
+    "width": 1000,
+    "tabOrder": 2760
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Glosario"
+                    }
+                  },
+                  "Property": "Término"
+                }
+              },
+              "queryRef": "Glosario.Término",
+              "nativeQueryRef": "Término"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Glosario"
+                    }
+                  },
+                  "Property": "Definición"
+                }
+              },
+              "queryRef": "Glosario.Definición",
+              "nativeQueryRef": "Definición"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Glosario"
+                    }
+                  },
+                  "Property": "Fórmula / regla"
+                }
+              },
+              "queryRef": "Glosario.Fórmula / regla",
+              "nativeQueryRef": "Fórmula / regla"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Glosario"
+                    }
+                  },
+                  "Property": "Fuente"
+                }
+              },
+              "queryRef": "Glosario.Fuente",
+              "nativeQueryRef": "Fuente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Glosario"
+                    }
+                  },
+                  "Property": "Advertencia"
+                }
+              },
+              "queryRef": "Glosario.Advertencia",
+              "nativeQueryRef": "Advertencia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Glosario"
+                    }
+                  },
+                  "Property": "Integrantes base 2026"
+                }
+              },
+              "queryRef": "Glosario.Integrantes base 2026",
+              "nativeQueryRef": "Integrantes base 2026"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

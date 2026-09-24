@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection16a391969290444fa812a8ea",
+  "displayName": "04 Evolución 2023–2026",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

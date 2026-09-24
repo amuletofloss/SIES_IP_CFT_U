@@ -1,0 +1,283 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "86053d9b8da04ecaba7f",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 540,
+    "width": 1240,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAnio"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              },
+              "queryRef": "DimAnio.Año",
+              "nativeQueryRef": "Año"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Grupo institución"
+                }
+              },
+              "queryRef": "DimInstitucion.Grupo institución",
+              "nativeQueryRef": "Grupo institución"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Institución"
+                }
+              },
+              "queryRef": "DimInstitucion.Institución",
+              "nativeQueryRef": "Institución"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarrera"
+                    }
+                  },
+                  "Property": "Carrera"
+                }
+              },
+              "queryRef": "DimCarrera.Carrera",
+              "nativeQueryRef": "Carrera"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarrera"
+                    }
+                  },
+                  "Property": "Área del conocimiento"
+                }
+              },
+              "queryRef": "DimCarrera.Área del conocimiento",
+              "nativeQueryRef": "Área del conocimiento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimModalidad"
+                    }
+                  },
+                  "Property": "Modalidad"
+                }
+              },
+              "queryRef": "DimModalidad.Modalidad",
+              "nativeQueryRef": "Modalidad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimJornada"
+                    }
+                  },
+                  "Property": "Jornada"
+                }
+              },
+              "queryRef": "DimJornada.Jornada",
+              "nativeQueryRef": "Jornada"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlan"
+                    }
+                  },
+                  "Property": "Grupo de plan"
+                }
+              },
+              "queryRef": "DimPlan.Grupo de plan",
+              "nativeQueryRef": "Grupo de plan"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimPlan"
+                    }
+                  },
+                  "Property": "Subgrupo de plan"
+                }
+              },
+              "queryRef": "DimPlan.Subgrupo de plan",
+              "nativeQueryRef": "Subgrupo de plan"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total",
+              "nativeQueryRef": "Matrícula total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Regular Total"
+                }
+              },
+              "queryRef": "_Medidas.Regular Total",
+              "nativeQueryRef": "Regular Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Regular 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Regular 1er año",
+              "nativeQueryRef": "Regular 1er año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad Total"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad Total",
+              "nativeQueryRef": "Continuidad Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad 1er año",
+              "nativeQueryRef": "Continuidad 1er año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Otros Total"
+                }
+              },
+              "queryRef": "_Medidas.Otros Total",
+              "nativeQueryRef": "Otros Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Otros 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Otros 1er año",
+              "nativeQueryRef": "Otros 1er año"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

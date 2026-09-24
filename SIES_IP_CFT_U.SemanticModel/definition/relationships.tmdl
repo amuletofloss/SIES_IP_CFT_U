@@ -1,0 +1,24 @@
+relationship Fact-Año
+	fromColumn: FactMatricula.Año
+	toColumn: DimAnio.Año
+
+relationship Fact-Institución
+	fromColumn: FactMatricula.'Institución ID'
+	toColumn: DimInstitucion.'Institución ID'
+
+relationship Fact-Carrera
+	fromColumn: FactMatricula.'Carrera Key'
+	toColumn: DimCarrera.'Carrera Key'
+
+relationship Fact-Modalidad
+	fromColumn: FactMatricula.Modalidad
+	toColumn: DimModalidad.Modalidad
+
+relationship Fact-Jornada
+	fromColumn: FactMatricula.Jornada
+	toColumn: DimJornada.Jornada
+
+relationship Fact-Plan
+	fromColumn: FactMatricula.'Tipo de plan'
+	toColumn: DimPlan.'Tipo de plan'
+

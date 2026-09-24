@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "10385e7bf5f849498d83",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 540,
+    "width": 620,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimInstitucion"
+                    }
+                  },
+                  "Property": "Segmento competitivo"
+                }
+              },
+              "queryRef": "DimInstitucion.Segmento competitivo",
+              "nativeQueryRef": "Segmento competitivo",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

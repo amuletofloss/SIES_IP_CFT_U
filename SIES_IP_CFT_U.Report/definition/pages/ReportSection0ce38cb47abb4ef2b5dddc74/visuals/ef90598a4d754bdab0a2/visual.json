@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "ef90598a4d754bdab0a2",
+  "position": {
+    "x": 20,
+    "y": 340,
+    "z": 4420,
+    "height": 145,
+    "width": 220,
+    "tabOrder": 4420
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Segmento"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Segmento",
+              "nativeQueryRef": "Segmento",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Grupo residual'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "ClasificacionCompetitiva",
+      "fieldChanges": true,
+      "filterChanges": true
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/// Respaldo fijo de la composición de los grupos competitivos residuales.
+table ClasificacionCompetitiva
+	lineageTag: df4b4630-4a5e-4aaf-96d5-ed62afe7434b
+
+	column Segmento
+		dataType: string
+		lineageTag: e891f421-7ecd-42cf-87d5-94552d12d270
+		summarizeBy: none
+		sourceColumn: SegmentoCompetitivo
+
+	column 'Grupo institución'
+		dataType: string
+		lineageTag: 32e5bf0c-0d40-49ec-aa87-2c81731ef9a4
+		summarizeBy: none
+		sourceColumn: GrupoInstitucion
+
+	column 'Instituciones integrantes'
+		dataType: string
+		lineageTag: 290d1724-08b5-44a8-a14d-b27e005596c7
+		summarizeBy: none
+		sourceColumn: Instituciones
+
+	column 'Matrícula total 2026'
+		dataType: int64
+		lineageTag: 2e4c81b3-a780-44c5-9b4a-0730033e0a0a
+		summarizeBy: none
+		sourceColumn: TotalBase
+
+	column 'Matrícula primer año 2026'
+		dataType: int64
+		lineageTag: 9206ea9f-18b4-4175-932d-540f8fba5766
+		summarizeBy: none
+		sourceColumn: P1Base
+
+	column 'Año base'
+		dataType: int64
+		lineageTag: b66262b2-4410-4fae-bf0a-0591f5546a80
+		summarizeBy: none
+		sourceColumn: AnioBase
+
+	column 'Estado base'
+		dataType: string
+		lineageTag: cd09f4c9-a815-4520-a0eb-2a7d6dbc975a
+		summarizeBy: none
+		sourceColumn: EstadoBase
+
+	column Regla
+		dataType: string
+		lineageTag: 2826d9b6-dc1e-4d73-804d-b6ac678c3596
+		summarizeBy: none
+		sourceColumn: Regla
+
+	partition Source = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(pCarpetaDatos & "\\clasificacion_competitiva.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {
+					{"SegmentoCompetitivo", type text},
+					{"GrupoInstitucion", type text},
+					{"Instituciones", type text},
+					{"TotalBase", Int64.Type},
+					{"P1Base", Int64.Type},
+					{"AnioBase", Int64.Type},
+					{"EstadoBase", type text},
+					{"Regla", type text}
+					}, "es-CL")
+				in
+					Typed
+

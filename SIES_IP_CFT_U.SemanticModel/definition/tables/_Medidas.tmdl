@@ -1,0 +1,130 @@
+/// Tabla central de medidas DAX documentadas.
+table _Medidas
+	lineageTag: 06d337f6-0be1-4497-9abf-9ef0560ea862
+
+	/// Matrícula total; si Año no está filtrado, muestra el último año disponible.
+	measure 'Matrícula total' = VAR y = MAXX(ALL(DimAnio), DimAnio[Año]) RETURN IF(ISFILTERED(DimAnio[Año]), SUM(FactMatricula[Matrícula total]), CALCULATE(SUM(FactMatricula[Matrícula total]), DimAnio[Año] = y))
+		formatString: #,##0
+		lineageTag: 35f0944f-5c0a-4ecd-9637-bc126b0c2ce8
+
+	/// Matrícula informada por SIES como primer año.
+	measure 'Matrícula primer año' = VAR y = MAXX(ALL(DimAnio), DimAnio[Año]) RETURN IF(ISFILTERED(DimAnio[Año]), SUM(FactMatricula[Matrícula primer año]), CALCULATE(SUM(FactMatricula[Matrícula primer año]), DimAnio[Año] = y))
+		formatString: #,##0
+		lineageTag: 056c5049-3942-4193-ad41-4dde54faa36a
+
+	/// Matrícula total del grupo Regular.
+	measure 'Regular Total' = COALESCE(CALCULATE([Matrícula total], KEEPFILTERS(DimPlan[Grupo de plan] = "Regular")), 0)
+		formatString: #,##0
+		lineageTag: 85d55887-1fb6-4f55-80d9-1c3adb9d7c8c
+
+	/// Primer año del grupo Regular.
+	measure 'Regular 1er año' = COALESCE(CALCULATE([Matrícula primer año], KEEPFILTERS(DimPlan[Grupo de plan] = "Regular")), 0)
+		formatString: #,##0
+		lineageTag: d63350c3-38e3-48bc-adaf-0f37417f3311
+
+	/// Matrícula total de Plan Especial y Plan Regular de Continuidad.
+	measure 'Continuidad Total' = COALESCE(CALCULATE([Matrícula total], KEEPFILTERS(DimPlan[Grupo de plan] = "Continuidad")), 0)
+		formatString: #,##0
+		lineageTag: 13656e2d-c7fa-4cad-9585-9a6d34e45dd6
+
+	/// Primer año de Plan Especial y Plan Regular de Continuidad.
+	measure 'Continuidad 1er año' = COALESCE(CALCULATE([Matrícula primer año], KEEPFILTERS(DimPlan[Grupo de plan] = "Continuidad")), 0)
+		formatString: #,##0
+		lineageTag: 1197a049-7283-4381-8acf-0a8e5a82cb9f
+
+	/// Matrícula total de tipos de plan no mapeados.
+	measure 'Otros Total' = COALESCE(CALCULATE([Matrícula total], KEEPFILTERS(DimPlan[Grupo de plan] = "Otros")), 0)
+		formatString: #,##0
+		lineageTag: 28b4b14e-baa8-489e-802b-facb6a221451
+
+	/// Primer año de tipos de plan no mapeados.
+	measure 'Otros 1er año' = COALESCE(CALCULATE([Matrícula primer año], KEEPFILTERS(DimPlan[Grupo de plan] = "Otros")), 0)
+		formatString: #,##0
+		lineageTag: b0f03817-2ce3-49a1-826d-cfdaecbca6d4
+
+	/// Peso de primer año en la matrícula total.
+	measure '% primer año' = DIVIDE([Matrícula primer año], [Matrícula total])
+		formatString: 0.0%
+		lineageTag: 2c275a73-a43c-4676-ba61-0547abecda9f
+
+	/// Matrícula total de IP y CFT.
+	measure 'Matrícula total IP+CFT' = CALCULATE([Matrícula total], KEEPFILTERS(DimInstitucion[Tipo institución] IN {"IP", "CFT"}))
+		formatString: #,##0
+		lineageTag: 4bd2ed5a-1209-4dd5-ae12-58d76bd730fa
+
+	/// Primer año de IP y CFT.
+	measure 'Matrícula primer año IP+CFT' = CALCULATE([Matrícula primer año], KEEPFILTERS(DimInstitucion[Tipo institución] IN {"IP", "CFT"}))
+		formatString: #,##0
+		lineageTag: bed3fade-539e-45d9-9eaf-a571769efc85
+
+	/// Matrícula total universitaria.
+	measure 'Matrícula total universidades' = CALCULATE([Matrícula total], KEEPFILTERS(DimInstitucion[Tipo institución] = "U"))
+		formatString: #,##0
+		lineageTag: 0089e2e8-3868-492f-ba4b-2c555f3a5f3e
+
+	/// Primer año universitario.
+	measure 'Matrícula primer año universidades' = CALCULATE([Matrícula primer año], KEEPFILTERS(DimInstitucion[Tipo institución] = "U"))
+		formatString: #,##0
+		lineageTag: 8e4bd7f1-489d-4b37-b123-ac109d3af41a
+
+	/// Matrícula total universitaria del grupo Continuidad.
+	measure 'Continuidad Total universidades' = CALCULATE([Continuidad Total], KEEPFILTERS(DimInstitucion[Tipo institución] = "U"))
+		formatString: #,##0
+		lineageTag: 8904604e-fc19-4be4-9030-04a54372bf27
+
+	/// Primer año universitario del grupo Continuidad.
+	measure 'Continuidad 1er año universidades' = CALCULATE([Continuidad 1er año], KEEPFILTERS(DimInstitucion[Tipo institución] = "U"))
+		formatString: #,##0
+		lineageTag: d971c934-c7e6-49b8-9aec-2efad88d02be
+
+	/// Matrícula total del grupo ECS.
+	measure 'ECS matrícula total' = CALCULATE([Matrícula total], DimInstitucion[Grupo institución] = "ECS")
+		formatString: #,##0
+		lineageTag: 5664beaa-ebb7-497d-9df9-79a6bb2fc2dc
+
+	/// Primer año del grupo ECS.
+	measure 'ECS matrícula primer año' = CALCULATE([Matrícula primer año], DimInstitucion[Grupo institución] = "ECS")
+		formatString: #,##0
+		lineageTag: 488292be-99a3-4389-ad95-a7ee21975734
+
+	/// Participación ECS en primer año IP+CFT.
+	measure 'Participación ECS P1 IP+CFT' = DIVIDE([ECS matrícula primer año], CALCULATE([Matrícula primer año IP+CFT], ALL(DimInstitucion)))
+		formatString: 0.0%
+		lineageTag: e8318cbf-e0ac-4810-bf51-550e557090b7
+
+	/// Ranking dinámico del grupo visible por P1 IP+CFT.
+	measure 'Ranking P1 IP+CFT' = RANKX(FILTER(ALL(DimInstitucion[Grupo institución]), CALCULATE([Matrícula primer año IP+CFT]) > 0), CALCULATE([Matrícula primer año IP+CFT]), , DESC, Dense)
+		formatString: 0
+		lineageTag: 66f34e62-e418-4774-96f9-b218d90f8455
+
+	/// Ranking dinámico de ECS por primer año IP+CFT.
+	measure 'ECS ranking P1 IP+CFT' = VAR ecs = CALCULATE([Matrícula primer año IP+CFT], ALL(DimInstitucion), DimInstitucion[Grupo institución] = "ECS") RETURN RANKX(FILTER(ALL(DimInstitucion[Grupo institución]), CALCULATE([Matrícula primer año IP+CFT]) > 0), CALCULATE([Matrícula primer año IP+CFT]), ecs, DESC, Dense)
+		formatString: 0
+		lineageTag: 2027d505-d810-4cb5-bb9b-936da6eccce7
+
+	/// Participación de la institución o grupo bajo los filtros activos.
+	measure 'Participación P1' = DIVIDE([Matrícula primer año], CALCULATE([Matrícula primer año], ALL(DimInstitucion)))
+		formatString: 0.0%
+		lineageTag: 8c684284-66e0-42c1-8dd6-1f80ad7260c8
+
+	/// Concentración de primer año por área.
+	measure 'Participación P1 área' = DIVIDE([Matrícula primer año], CALCULATE([Matrícula primer año], ALL(DimCarrera[Área del conocimiento])))
+		formatString: 0.0%
+		lineageTag: 70f48c6d-7bfb-4468-8138-df9c0a995f28
+
+	/// Variación de primer año contra el año anterior.
+	measure 'Variación P1 interanual' = VAR y = COALESCE(SELECTEDVALUE(DimAnio[Año]), MAXX(ALL(DimAnio), DimAnio[Año])) VAR actual = CALCULATE(SUM(FactMatricula[Matrícula primer año]), DimAnio[Año] = y) VAR anterior = CALCULATE(SUM(FactMatricula[Matrícula primer año]), ALL(DimAnio), DimAnio[Año] = y - 1) RETURN DIVIDE(actual - anterior, anterior)
+		formatString: 0.0%
+		lineageTag: 4de0408b-82ec-4297-8692-08a1ab1d1cb8
+
+	column Dummy
+		dataType: int64
+		isHidden
+		lineageTag: f974c7fe-b4aa-46f4-81e3-24b09d635c46
+		summarizeBy: none
+		sourceColumn: [Dummy]
+
+	partition _Medidas = calculated
+		mode: import
+		source = ROW("Dummy", 1)
+

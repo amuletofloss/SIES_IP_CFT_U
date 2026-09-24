@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "ba0bb3efe8784f75b2a7",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 140,
+    "width": 1240,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Regular Total"
+                }
+              },
+              "queryRef": "_Medidas.Regular Total",
+              "nativeQueryRef": "Regular Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Regular 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Regular 1er año",
+              "nativeQueryRef": "Regular 1er año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad Total"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad Total",
+              "nativeQueryRef": "Continuidad Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad 1er año",
+              "nativeQueryRef": "Continuidad 1er año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Otros Total"
+                }
+              },
+              "queryRef": "_Medidas.Otros Total",
+              "nativeQueryRef": "Otros Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Otros 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Otros 1er año",
+              "nativeQueryRef": "Otros 1er año"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

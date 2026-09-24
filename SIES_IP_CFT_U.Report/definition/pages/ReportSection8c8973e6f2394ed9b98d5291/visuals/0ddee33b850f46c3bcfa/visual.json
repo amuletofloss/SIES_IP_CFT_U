@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "0ddee33b850f46c3bcfa",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 140,
+    "width": 1240,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula total"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula total",
+              "nativeQueryRef": "Matrícula total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año",
+              "nativeQueryRef": "Matrícula primer año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad Total"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad Total",
+              "nativeQueryRef": "Continuidad Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Continuidad 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Continuidad 1er año",
+              "nativeQueryRef": "Continuidad 1er año"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

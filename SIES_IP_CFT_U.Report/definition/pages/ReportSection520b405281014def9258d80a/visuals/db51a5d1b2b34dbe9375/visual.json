@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "db51a5d1b2b34dbe9375",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 2520,
+    "height": 140,
+    "width": 1240,
+    "tabOrder": 2520
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Matrícula primer año IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.Matrícula primer año IP+CFT",
+              "nativeQueryRef": "Matrícula primer año IP+CFT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ECS matrícula primer año"
+                }
+              },
+              "queryRef": "_Medidas.ECS matrícula primer año",
+              "nativeQueryRef": "ECS matrícula primer año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Participación ECS P1 IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.Participación ECS P1 IP+CFT",
+              "nativeQueryRef": "Participación ECS P1 IP+CFT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ECS ranking P1 IP+CFT"
+                }
+              },
+              "queryRef": "_Medidas.ECS ranking P1 IP+CFT",
+              "nativeQueryRef": "ECS ranking P1 IP+CFT"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

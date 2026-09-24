@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SIES IP CFT U"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f89a6376-5831-4411-b308-2c36be15e523"
+  }
+}

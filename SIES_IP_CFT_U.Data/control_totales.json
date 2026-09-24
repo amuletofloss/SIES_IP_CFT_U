@@ -1,0 +1,75 @@
+{
+  "source": "SIES — Matrícula en Educación Superior 2023–2026",
+  "source_url": "https://datosabiertos.mineduc.cl/matricula-en-educacion-superior/",
+  "rows_source": 63930,
+  "rows_universe": 4463,
+  "excluded_institution_years": 50,
+  "totals": [
+    {
+      "Anio": 2023,
+      "TotalMatricula": 152848,
+      "PrimerAnio": 46550.0,
+      "RegularTotal": 120636,
+      "RegularPrimerAnio": 43412.0,
+      "ContinuidadTotal": 32212,
+      "ContinuidadPrimerAnio": 3138.0,
+      "OtrosTotal": 0.0,
+      "OtrosPrimerAnio": 0.0
+    },
+    {
+      "Anio": 2024,
+      "TotalMatricula": 170936,
+      "PrimerAnio": 51096.0,
+      "RegularTotal": 134016,
+      "RegularPrimerAnio": 47663.0,
+      "ContinuidadTotal": 36920,
+      "ContinuidadPrimerAnio": 3433.0,
+      "OtrosTotal": 0.0,
+      "OtrosPrimerAnio": 0.0
+    },
+    {
+      "Anio": 2025,
+      "TotalMatricula": 196190,
+      "PrimerAnio": 57806.0,
+      "RegularTotal": 152860,
+      "RegularPrimerAnio": 55138.0,
+      "ContinuidadTotal": 43330,
+      "ContinuidadPrimerAnio": 2668.0,
+      "OtrosTotal": 0.0,
+      "OtrosPrimerAnio": 0.0
+    },
+    {
+      "Anio": 2026,
+      "TotalMatricula": 229492,
+      "PrimerAnio": 63422.0,
+      "RegularTotal": 175270,
+      "RegularPrimerAnio": 61137.0,
+      "ContinuidadTotal": 54222,
+      "ContinuidadPrimerAnio": 2285.0,
+      "OtrosTotal": 0.0,
+      "OtrosPrimerAnio": 0.0
+    }
+  ],
+  "ecs": [
+    {
+      "Anio": 2023,
+      "TotalMatricula": 2051,
+      "PrimerAnio": 564.0
+    },
+    {
+      "Anio": 2024,
+      "TotalMatricula": 2859,
+      "PrimerAnio": 2144.0
+    },
+    {
+      "Anio": 2025,
+      "TotalMatricula": 6418,
+      "PrimerAnio": 3164.0
+    },
+    {
+      "Anio": 2026,
+      "TotalMatricula": 7918,
+      "PrimerAnio": 2281.0
+    }
+  ]
+}

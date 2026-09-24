@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "b076d8a12b3d45a7ac7b",
+  "position": {
+    "x": 260,
+    "y": 455,
+    "z": 5810,
+    "height": 235,
+    "width": 1000,
+    "tabOrder": 5810
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Segmento"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Segmento",
+              "nativeQueryRef": "Segmento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Grupo institución"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Grupo institución",
+              "nativeQueryRef": "Grupo institución"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Instituciones integrantes"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Instituciones integrantes",
+              "nativeQueryRef": "Instituciones integrantes"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Matrícula total 2026"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Matrícula total 2026",
+              "nativeQueryRef": "Matrícula total 2026"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Matrícula primer año 2026"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Matrícula primer año 2026",
+              "nativeQueryRef": "Matrícula primer año 2026"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Estado base"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Estado base",
+              "nativeQueryRef": "Estado base"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ClasificacionCompetitiva"
+                    }
+                  },
+                  "Property": "Regla"
+                }
+              },
+              "queryRef": "ClasificacionCompetitiva.Regla",
+              "nativeQueryRef": "Regla"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
