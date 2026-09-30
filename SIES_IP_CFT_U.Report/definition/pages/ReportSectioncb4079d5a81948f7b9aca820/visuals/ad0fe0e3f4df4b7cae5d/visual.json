@@ -37,11 +37,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "ECS matrícula primer año"
+                  "Property": "ECS Regular 1er año"
                 }
               },
-              "queryRef": "_Medidas.ECS matrícula primer año",
-              "nativeQueryRef": "ECS matrícula primer año"
+              "queryRef": "_Medidas.ECS Regular 1er año",
+              "nativeQueryRef": "ECS Regular 1er año"
             },
             {
               "field": {
@@ -51,11 +51,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Participación ECS P1 IP+CFT"
+                  "Property": "Participación ECS Regular P1 IP+CFT"
                 }
               },
-              "queryRef": "_Medidas.Participación ECS P1 IP+CFT",
-              "nativeQueryRef": "Participación ECS P1 IP+CFT"
+              "queryRef": "_Medidas.Participación ECS Regular P1 IP+CFT",
+              "nativeQueryRef": "Participación ECS Regular P1 IP+CFT"
             }
           ]
         }

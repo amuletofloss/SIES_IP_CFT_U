@@ -8,11 +8,11 @@ El proyecto incluye datos públicos agregados de SIES, un modelo semántico docu
 
 > Este es un proyecto analítico independiente. No es un producto oficial de SIES ni del Ministerio de Educación.
 
-## Novedades de la versión 1.1.0
+## Novedades de la versión 1.2.0
 
-- Diferencia entre **Área carrera genérica** y **Nombre carrera** informado por cada institución.
-- Duración de estudio y duración total, ambas expresadas en semestres.
-- Navegación jerárquica hasta el nombre exacto de la carrera en las vistas analíticas y de detalle.
+- Separación de los tres tipos oficiales SIES: **Plan Regular**, **Plan Especial** y **Plan Regular de Continuidad**.
+- Uso de **Regular 1er año** como indicador principal de captación, ranking y segmentación competitiva.
+- Plan Especial visible por separado; Continuidad se presenta solo con matrícula total porque SIES no la considera posible de contar con primer año.
 - PBIX portable para abrir el informe con los datos 2023–2026 ya importados.
 
 ## Inicio rápido
@@ -20,7 +20,7 @@ El proyecto incluye datos públicos agregados de SIES, un modelo semántico docu
 ### Solo quiero visualizar el informe
 
 1. Abra la [última versión publicada](https://github.com/amuletofloss/SIES_IP_CFT_U/releases/latest).
-2. Descargue `SIES_IP_CFT_U_v1.1.0.pbix`.
+2. Descargue `SIES_IP_CFT_U_v1.2.0.pbix`.
 3. Ábralo con una versión reciente de Microsoft Power BI Desktop.
 
 El PBIX incluye los datos importados y permite navegar inmediatamente, aunque los CSV no estén disponibles. Para actualizar los datos use el proyecto PBIP y el procedimiento de la sección siguiente.
@@ -49,12 +49,12 @@ El proyecto original conserva una ruta genérica para evitar publicar nombres de
 
 ## Qué puede analizarse
 
-- Matrícula total y matrícula de primer año.
+- Matrícula total, primer año SIES y primer año de Plan Regular.
 - Mercado IP+CFT y mercado universitario.
 - Modalidad No Presencial o Semipresencial.
 - Jornadas A Distancia, Diurna, Vespertina, Otra y Semipresencial.
 - Institución, grupo institucional, nombre de carrera, área genérica, duraciones y territorio.
-- Planes Regular, Continuidad y Otros, separados entre total y primer año.
+- Planes Regular, Especial y Regular de Continuidad, sin mezclar Especial con Continuidad.
 - Participación, ranking, evolución anual y concentración competitiva.
 - ECS frente al mercado, usando los mismos datos públicos SIES que el resto del informe.
 
@@ -65,26 +65,26 @@ El proyecto original conserva una ruta genérica para evitar publicar nombres de
 | 00 Resumen SIES | Indicadores ejecutivos y filtros principales |
 | 01 Mercado IP+CFT | Tamaño, participación y ranking del subsistema técnico-profesional |
 | 02 Mercado universitario | Universidades por área genérica y nombre de carrera |
-| 03 Planes y continuidad | Regular, Continuidad y Otros, total y primer año |
-| 04 Evolución 2023–2026 | Tendencias anuales por grupo de plan |
+| 03 Tipos de plan SIES | Regular, Especial y Continuidad; total y primer año cuando corresponde |
+| 04 Evolución 2023–2026 | Tendencias anuales por tipo de plan SIES |
 | 05 Portafolio ECS vs mercado | Comparación institucional y áreas de conocimiento |
 | 06 Concentración por área | Área de conocimiento, área genérica y nombre de carrera |
 | 07 Mapa competitivo | Grupos nominados y categorías residuales |
 | 08 Detalle SIES | Nombre de carrera y duraciones de estudio y total |
 | 09 Glosario y metodología | Definiciones, reglas y clasificación competitiva |
 
-Todas las páginas analíticas incluyen filtros por **Año, Modalidad, Jornada, Grupo de plan y Subgrupo**.
+Todas las páginas analíticas incluyen filtros por **Año, Modalidad, Jornada y Tipo de plan SIES**.
 
 ## Criterios metodológicos principales
 
-- **Regular:** Plan Regular.
-- **Continuidad:** Plan Especial y Plan Regular de Continuidad.
-- **Otros:** cualquier tipo de plan no incluido en los dos grupos anteriores.
-- **Otros competidores:** grupos IP con menos de 900 matrículas de primer año en la base fija 2026.
-- **U (otras):** grupos exclusivamente universitarios con menos de 70 matrículas de primer año en la base fija 2026.
+- **Plan Regular:** ingreso desde primer año sin una certificación previa distinta de la propia del proceso de selección.
+- **Plan Especial:** programa dirigido a un grupo específico de estudiantes; puede informar primer año.
+- **Plan Regular de Continuidad:** exige estudios superiores previos; SIES no lo considera posible de contar con primer año.
+- **Otros competidores:** grupos IP con menos de 900 matrículas regulares de primer año en la base fija 2026.
+- **U (otras):** grupos exclusivamente universitarios con menos de 70 matrículas regulares de primer año en la base fija 2026.
 - **CFT (otros):** CFT sin marca competitiva nominada; no utiliza umbral.
 
-La matrícula de primer año es un subconjunto de la matrícula total y no debe sumarse como una categoría adicional. La metodología completa está en [docs/METODOLOGIA.md](docs/METODOLOGIA.md).
+El tipo de plan es autorreportado por cada institución a SIES. El informe conserva esa clasificación aunque una oferta parezca corresponder a otro tipo y explicita la advertencia en el glosario. La metodología completa está en [docs/METODOLOGIA.md](docs/METODOLOGIA.md).
 
 ## Datos y privacidad
 

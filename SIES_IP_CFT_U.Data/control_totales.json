@@ -11,10 +11,10 @@
       "PrimerAnio": 46550.0,
       "RegularTotal": 120636,
       "RegularPrimerAnio": 43412.0,
-      "ContinuidadTotal": 32212,
-      "ContinuidadPrimerAnio": 3138.0,
-      "OtrosTotal": 0.0,
-      "OtrosPrimerAnio": 0.0
+      "EspecialTotal": 7792,
+      "EspecialPrimerAnio": 3138.0,
+      "ContinuidadTotal": 24420,
+      "ContinuidadPrimerAnio": 0.0
     },
     {
       "Anio": 2024,
@@ -22,10 +22,10 @@
       "PrimerAnio": 51096.0,
       "RegularTotal": 134016,
       "RegularPrimerAnio": 47663.0,
-      "ContinuidadTotal": 36920,
-      "ContinuidadPrimerAnio": 3433.0,
-      "OtrosTotal": 0.0,
-      "OtrosPrimerAnio": 0.0
+      "EspecialTotal": 9277,
+      "EspecialPrimerAnio": 3433.0,
+      "ContinuidadTotal": 27643,
+      "ContinuidadPrimerAnio": 0.0
     },
     {
       "Anio": 2025,
@@ -33,10 +33,10 @@
       "PrimerAnio": 57806.0,
       "RegularTotal": 152860,
       "RegularPrimerAnio": 55138.0,
-      "ContinuidadTotal": 43330,
-      "ContinuidadPrimerAnio": 2668.0,
-      "OtrosTotal": 0.0,
-      "OtrosPrimerAnio": 0.0
+      "EspecialTotal": 8138,
+      "EspecialPrimerAnio": 2668.0,
+      "ContinuidadTotal": 35192,
+      "ContinuidadPrimerAnio": 0.0
     },
     {
       "Anio": 2026,
@@ -44,32 +44,44 @@
       "PrimerAnio": 63422.0,
       "RegularTotal": 175270,
       "RegularPrimerAnio": 61137.0,
-      "ContinuidadTotal": 54222,
-      "ContinuidadPrimerAnio": 2285.0,
-      "OtrosTotal": 0.0,
-      "OtrosPrimerAnio": 0.0
+      "EspecialTotal": 9701,
+      "EspecialPrimerAnio": 2285.0,
+      "ContinuidadTotal": 44521,
+      "ContinuidadPrimerAnio": 0.0
     }
   ],
   "ecs": [
     {
       "Anio": 2023,
       "TotalMatricula": 2051,
-      "PrimerAnio": 564.0
+      "PrimerAnioSIES": 564.0,
+      "RegularPrimerAnio": 469.0,
+      "EspecialTotal": 500,
+      "EspecialPrimerAnio": 95.0
     },
     {
       "Anio": 2024,
       "TotalMatricula": 2859,
-      "PrimerAnio": 2144.0
+      "PrimerAnioSIES": 2144.0,
+      "RegularPrimerAnio": 1703.0,
+      "EspecialTotal": 701,
+      "EspecialPrimerAnio": 441.0
     },
     {
       "Anio": 2025,
       "TotalMatricula": 6418,
-      "PrimerAnio": 3164.0
+      "PrimerAnioSIES": 3164.0,
+      "RegularPrimerAnio": 2308.0,
+      "EspecialTotal": 1589,
+      "EspecialPrimerAnio": 856.0
     },
     {
       "Anio": 2026,
       "TotalMatricula": 7918,
-      "PrimerAnio": 2281.0
+      "PrimerAnioSIES": 2281.0,
+      "RegularPrimerAnio": 2281.0,
+      "EspecialTotal": 2354,
+      "EspecialPrimerAnio": 0.0
     }
   ]
 }

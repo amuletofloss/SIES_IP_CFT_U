@@ -1,3 +1,5 @@
 expression pCarpetaDatos = "C:\SIES_IP_CFT_U\SIES_IP_CFT_U.Data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: b9da5414-00da-46b4-a460-98aa8b18b288
 
+	annotation PBI_ResultType = Text
+

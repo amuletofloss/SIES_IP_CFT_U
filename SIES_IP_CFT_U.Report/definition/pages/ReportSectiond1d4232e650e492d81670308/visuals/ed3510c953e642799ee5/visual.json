@@ -86,11 +86,39 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Matrícula primer año universidades"
+                  "Property": "Regular 1er año universidades"
                 }
               },
-              "queryRef": "_Medidas.Matrícula primer año universidades",
-              "nativeQueryRef": "Matrícula primer año universidades"
+              "queryRef": "_Medidas.Regular 1er año universidades",
+              "nativeQueryRef": "Regular 1er año universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Especial Total universidades"
+                }
+              },
+              "queryRef": "_Medidas.Especial Total universidades",
+              "nativeQueryRef": "Especial Total universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Especial 1er año universidades"
+                }
+              },
+              "queryRef": "_Medidas.Especial 1er año universidades",
+              "nativeQueryRef": "Especial 1er año universidades"
             },
             {
               "field": {
@@ -114,25 +142,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Continuidad 1er año universidades"
+                  "Property": "Participación Regular P1"
                 }
               },
-              "queryRef": "_Medidas.Continuidad 1er año universidades",
-              "nativeQueryRef": "Continuidad 1er año universidades"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Participación P1"
-                }
-              },
-              "queryRef": "_Medidas.Participación P1",
-              "nativeQueryRef": "Participación P1"
+              "queryRef": "_Medidas.Participación Regular P1",
+              "nativeQueryRef": "Participación Regular P1"
             }
           ]
         }
@@ -147,7 +161,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Matrícula primer año universidades"
+                "Property": "Regular 1er año universidades"
               }
             },
             "direction": "Descending"
@@ -306,7 +320,7 @@
                 "Entity": "_Medidas"
               }
             },
-            "Property": "Continuidad 1er año universidades"
+            "Property": "Especial 1er año universidades"
           }
         },
         "type": "Advanced"
@@ -351,7 +365,7 @@
                 "Entity": "_Medidas"
               }
             },
-            "Property": "Matrícula primer año universidades"
+            "Property": "Regular 1er año universidades"
           }
         },
         "type": "Advanced"
@@ -381,7 +395,7 @@
                 "Entity": "_Medidas"
               }
             },
-            "Property": "Participación P1"
+            "Property": "Participación Regular P1"
           }
         },
         "type": "Advanced"

@@ -56,11 +56,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Continuidad Total"
+                  "Property": "Especial Total"
                 }
               },
-              "queryRef": "_Medidas.Continuidad Total",
-              "nativeQueryRef": "Continuidad Total"
+              "queryRef": "_Medidas.Especial Total",
+              "nativeQueryRef": "Especial Total"
             },
             {
               "field": {
@@ -70,11 +70,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Otros Total"
+                  "Property": "Continuidad Total"
                 }
               },
-              "queryRef": "_Medidas.Otros Total",
-              "nativeQueryRef": "Otros Total"
+              "queryRef": "_Medidas.Continuidad Total",
+              "nativeQueryRef": "Continuidad Total"
             }
           ]
         }

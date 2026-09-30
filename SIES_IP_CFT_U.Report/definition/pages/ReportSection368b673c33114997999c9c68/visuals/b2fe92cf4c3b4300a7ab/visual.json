@@ -23,11 +23,11 @@
                       "Entity": "DimPlan"
                     }
                   },
-                  "Property": "Grupo de plan"
+                  "Property": "Tipo de plan SIES"
                 }
               },
-              "queryRef": "DimPlan.Grupo de plan",
-              "nativeQueryRef": "Grupo de plan",
+              "queryRef": "DimPlan.Tipo de plan SIES",
+              "nativeQueryRef": "Tipo de plan SIES",
               "active": true
             }
           ]
@@ -56,11 +56,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Matrícula primer año"
+                  "Property": "Primer año según tipo SIES"
                 }
               },
-              "queryRef": "_Medidas.Matrícula primer año",
-              "nativeQueryRef": "Matrícula primer año"
+              "queryRef": "_Medidas.Primer año según tipo SIES",
+              "nativeQueryRef": "Primer año según tipo SIES"
             }
           ]
         }

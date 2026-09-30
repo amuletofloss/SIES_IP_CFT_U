@@ -1,5 +1,13 @@
 # Historial de cambios
 
+## 1.2.0 — 2026-09-30
+
+- Separados Plan Regular, Plan Especial y Plan Regular de Continuidad conforme a las definiciones SIES.
+- Eliminada la denominación de primer año para Plan Regular de Continuidad.
+- Alineados rankings, participaciones y segmentos competitivos con primer año de Plan Regular.
+- Incorporada la advertencia de que el tipo de plan es autorreportado por cada institución.
+- Actualizados el proyecto PBIP, el PBIX portable y la documentación de GitHub Release.
+
 ## 1.1.0 — 2026-09-29
 
 - Incorporada la diferencia entre área carrera genérica y nombre de carrera.

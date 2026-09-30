@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "ReportSection368b673c33114997999c9c68",
-  "displayName": "03 Planes y continuidad",
+  "displayName": "03 Tipos de plan SIES",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280

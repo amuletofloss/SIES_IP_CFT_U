@@ -37,11 +37,39 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Matrícula primer año universidades"
+                  "Property": "Regular 1er año universidades"
                 }
               },
-              "queryRef": "_Medidas.Matrícula primer año universidades",
-              "nativeQueryRef": "Matrícula primer año universidades"
+              "queryRef": "_Medidas.Regular 1er año universidades",
+              "nativeQueryRef": "Regular 1er año universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Especial Total universidades"
+                }
+              },
+              "queryRef": "_Medidas.Especial Total universidades",
+              "nativeQueryRef": "Especial Total universidades"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Especial 1er año universidades"
+                }
+              },
+              "queryRef": "_Medidas.Especial 1er año universidades",
+              "nativeQueryRef": "Especial 1er año universidades"
             },
             {
               "field": {
@@ -56,20 +84,6 @@
               },
               "queryRef": "_Medidas.Continuidad Total universidades",
               "nativeQueryRef": "Continuidad Total universidades"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Continuidad 1er año universidades"
-                }
-              },
-              "queryRef": "_Medidas.Continuidad 1er año universidades",
-              "nativeQueryRef": "Continuidad 1er año universidades"
             }
           ]
         }

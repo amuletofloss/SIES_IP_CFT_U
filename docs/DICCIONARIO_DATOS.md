@@ -10,10 +10,10 @@
 | `dim_carrera.csv` | Carreras y clasificaciones académicas | ID, nombre, área genérica, CINE, duraciones y acreditación |
 | `dim_modalidad.csv` | Modalidades incluidas | Modalidad |
 | `dim_jornada.csv` | Jornadas incluidas | Jornada |
-| `dim_plan.csv` | Taxonomía de planes | Tipo SIES, grupo, subgrupo y orden |
+| `dim_plan.csv` | Taxonomía de planes | Tipo SIES, tipo analítico y orden |
 | `glosario.csv` | Definiciones visibles en el informe | Término, definición, regla, fuente y advertencia |
 | `auditoria_exclusiones.csv` | Instituciones-año no incorporadas | Año, institución, matrículas y motivo |
-| `clasificacion_competitiva.csv` | Membresías competitivas fijas | Segmento, grupo, integrantes, total y P1 base 2026 |
+| `clasificacion_competitiva.csv` | Membresías competitivas fijas | Segmento, grupo, integrantes, total y P1 Regular base 2026 |
 | `control_totales.json` | Controles reproducibles | Origen, filas, exclusiones y totales anuales |
 
 ## Tabla de hechos
@@ -49,37 +49,38 @@ Las duraciones son atributos enteros no sumables. La jerarquía visible del mode
 ### Volumen
 
 - Matrícula total
-- Matrícula primer año
-- % primer año
+- Matrícula primer año SIES
+- % Regular 1er año
 - Matrícula total IP+CFT
-- Matrícula primer año IP+CFT
+- Regular 1er año IP+CFT
 - Matrícula total universidades
-- Matrícula primer año universidades
+- Regular 1er año universidades
 
 ### Planes
 
 - Regular Total
 - Regular 1er año
+- Especial Total
+- Especial 1er año
 - Continuidad Total
-- Continuidad 1er año
-- Otros Total
-- Otros 1er año
+- Primer año según tipo SIES
+- Especial Total universidades
+- Especial 1er año universidades
 - Continuidad Total universidades
-- Continuidad 1er año universidades
 
 ### Participación y ranking
 
-- Participación P1
-- Participación P1 área
-- Ranking P1 IP+CFT
-- Variación P1 interanual
+- Participación Regular P1
+- Participación Regular P1 área
+- Ranking Regular P1 IP+CFT
+- Variación Regular P1 interanual
 
 ### ECS
 
 - ECS matrícula total
-- ECS matrícula primer año
-- Participación ECS P1 IP+CFT
-- ECS ranking P1 IP+CFT
+- ECS Regular 1er año
+- Participación ECS Regular P1 IP+CFT
+- ECS ranking Regular P1 IP+CFT
 
 ## Relaciones principales
 

@@ -9,18 +9,21 @@ Las medidas sin un filtro explícito de año muestran el último año disponible
 ## Matrícula total y primer año
 
 - **Matrícula total:** suma de `TotalMatricula` dentro del contexto de filtros.
-- **Matrícula primer año:** suma de `PrimerAnio` dentro del mismo contexto.
-- Primer año es un subconjunto del total; no se suma al total como una categoría adicional.
+- **Matrícula primer año SIES:** suma de `PrimerAnio`; incluye Plan Regular y Plan Especial.
+- **Regular 1er año:** primer año de Plan Regular y principal indicador de captación, participación, ranking y segmentación.
+- Plan Regular de Continuidad no se considera posible de contar con estudiantes de primer año; en los visuales se muestra como no aplicable.
 
 ## Clasificación de planes
 
-| Grupo | Tipo SIES incluido |
-|---|---|
-| Regular | Plan Regular |
-| Continuidad | Plan Especial; Plan Regular de Continuidad |
-| Otros | Cualquier valor diferente de los anteriores |
+| Tipo analítico | Tipo SIES incluido | Primer año |
+|---|---|---|
+| Regular | Plan Regular | Sí |
+| Especial | Plan Especial | Sí, separado de Regular |
+| Continuidad | Plan Regular de Continuidad | No aplica |
 
-Cada grupo tiene medidas separadas para matrícula total y primer año.
+SIES define Plan Especial como un programa dirigido a un grupo específico de estudiantes. Plan Regular de Continuidad exige haber cursado y aprobado un programa regular o 1.600 horas pedagógicas en educación superior. No son categorías equivalentes.
+
+El tipo de plan es autorreportado por cada institución. El informe conserva el valor publicado por SIES y no reclasifica ofertas que parezcan inconsistentes con la definición; esa limitación se informa en el glosario.
 
 ## Regla de consistencia
 
@@ -30,17 +33,17 @@ La revisión se realiza por institución y año:
 2. Si la matrícula de primer año es cero, solo se conserva cuando toda su matrícula corresponde al tipo SIES `Plan Regular de Continuidad`.
 3. En los demás casos se excluye y se registra el motivo en `auditoria_exclusiones.csv`.
 
-La excepción utiliza el tipo SIES exacto y no el grupo amplio **Continuidad**, que también contiene Plan Especial.
+La excepción utiliza exclusivamente el tipo SIES `Plan Regular de Continuidad`.
 
 ## Agrupaciones competitivas
 
-La pertenencia se fija con la matrícula de primer año 2026. Una vez clasificada una institución, sus matrículas responden normalmente a los filtros y años del informe.
+La pertenencia se fija con la matrícula regular de primer año 2026. Una vez clasificada una institución, sus matrículas responden normalmente a los filtros y años del informe.
 
 | Segmento | Regla fija 2026 |
 |---|---|
 | CFT (otros) | CFT que no pertenece a una marca competitiva nominada; sin umbral |
-| Otros competidores | Grupo IP con menos de 900 matrículas de primer año |
-| U (otras) | Grupo exclusivamente universitario con menos de 70 matrículas de primer año |
+| Otros competidores | Grupo IP con menos de 900 matrículas regulares de primer año |
+| U (otras) | Grupo exclusivamente universitario con menos de 70 matrículas regulares de primer año |
 
 Los integrantes, estados y volúmenes base están en `clasificacion_competitiva.csv` y en la página 09.
 
@@ -59,4 +62,3 @@ Todas las métricas ECS del informe se calculan con la misma fuente pública SIE
 - Un ranking depende de los filtros activos y del universo definido.
 - Una matrícula cero puede reflejar ausencia de registros válidos en el universo filtrado y no necesariamente inactividad total de la institución.
 - Las cifras no deben interpretarse como proyecciones ni como datos individuales de estudiantes.
-

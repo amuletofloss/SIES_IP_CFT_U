@@ -26,11 +26,11 @@ table ClasificacionCompetitiva
 		summarizeBy: none
 		sourceColumn: TotalBase
 
-	column 'Matrícula primer año 2026'
+	column 'Regular 1er año 2026'
 		dataType: int64
 		lineageTag: 9206ea9f-18b4-4175-932d-540f8fba5766
 		summarizeBy: none
-		sourceColumn: P1Base
+		sourceColumn: P1RegularBase
 
 	column 'Año base'
 		dataType: int64
@@ -61,7 +61,7 @@ table ClasificacionCompetitiva
 					{"GrupoInstitucion", type text},
 					{"Instituciones", type text},
 					{"TotalBase", Int64.Type},
-					{"P1Base", Int64.Type},
+					{"P1RegularBase", Int64.Type},
 					{"AnioBase", Int64.Type},
 					{"EstadoBase", type text},
 					{"Regla", type text}

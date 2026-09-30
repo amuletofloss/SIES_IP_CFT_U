@@ -51,53 +51,39 @@
                       "Entity": "_Medidas"
                     }
                   },
+                  "Property": "Especial Total"
+                }
+              },
+              "queryRef": "_Medidas.Especial Total",
+              "nativeQueryRef": "Especial Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Especial 1er año"
+                }
+              },
+              "queryRef": "_Medidas.Especial 1er año",
+              "nativeQueryRef": "Especial 1er año"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
                   "Property": "Continuidad Total"
                 }
               },
               "queryRef": "_Medidas.Continuidad Total",
               "nativeQueryRef": "Continuidad Total"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Continuidad 1er año"
-                }
-              },
-              "queryRef": "_Medidas.Continuidad 1er año",
-              "nativeQueryRef": "Continuidad 1er año"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Otros Total"
-                }
-              },
-              "queryRef": "_Medidas.Otros Total",
-              "nativeQueryRef": "Otros Total"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Otros 1er año"
-                }
-              },
-              "queryRef": "_Medidas.Otros 1er año",
-              "nativeQueryRef": "Otros 1er año"
             }
           ]
         }

@@ -4,26 +4,28 @@ table DimPlan
 
 	column 'Tipo de plan'
 		dataType: string
+		isHidden
 		lineageTag: 17c0ec71-0fe2-4d03-8476-cb42154f12d4
 		summarizeBy: none
 		sourceColumn: TipoPlan
 		sortByColumn: 'Orden subgrupo de plan'
 
-	column 'Grupo de plan'
+	column 'Tipo de plan SIES'
 		dataType: string
 		lineageTag: 553efcd0-81ad-4599-b1a4-6cbdd00eaaa7
 		summarizeBy: none
 		sourceColumn: GrupoPlan
-		sortByColumn: 'Orden grupo de plan'
+		sortByColumn: 'Orden tipo de plan SIES'
 
 	column 'Subgrupo de plan'
 		dataType: string
+		isHidden
 		lineageTag: 1acbcec5-73a5-41d3-b056-9b0207df9de8
 		summarizeBy: none
 		sourceColumn: SubgrupoPlan
 		sortByColumn: 'Orden subgrupo de plan'
 
-	column 'Orden grupo de plan'
+	column 'Orden tipo de plan SIES'
 		dataType: int64
 		isHidden
 		lineageTag: 5fe5f9f5-9410-46e3-ae95-faa64e559f6d

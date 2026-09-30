@@ -79,11 +79,11 @@
                       "Entity": "ClasificacionCompetitiva"
                     }
                   },
-                  "Property": "Matrícula primer año 2026"
+                  "Property": "Regular 1er año 2026"
                 }
               },
-              "queryRef": "ClasificacionCompetitiva.Matrícula primer año 2026",
-              "nativeQueryRef": "Matrícula primer año 2026"
+              "queryRef": "ClasificacionCompetitiva.Regular 1er año 2026",
+              "nativeQueryRef": "Regular 1er año 2026"
             },
             {
               "field": {

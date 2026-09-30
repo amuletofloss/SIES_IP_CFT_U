@@ -3,8 +3,13 @@ model Model
 	defaultPowerBIDataSourceVersion: powerBI_V3
 	discourageImplicitMeasures
 	sourceQueryCulture: es-CL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
 
 annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["FactMatricula","DimAnio","DimInstitucion","DimCarrera","DimModalidad","DimJornada","DimPlan","Glosario","AuditoriaExclusiones","ClasificacionCompetitiva","pCarpetaDatos"]
 
 ref table FactMatricula
 ref table DimAnio

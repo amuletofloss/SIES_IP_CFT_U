@@ -42,11 +42,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Matrícula primer año IP+CFT"
+                  "Property": "Regular 1er año IP+CFT"
                 }
               },
-              "queryRef": "_Medidas.Matrícula primer año IP+CFT",
-              "nativeQueryRef": "Matrícula primer año IP+CFT"
+              "queryRef": "_Medidas.Regular 1er año IP+CFT",
+              "nativeQueryRef": "Regular 1er año IP+CFT"
             }
           ]
         }

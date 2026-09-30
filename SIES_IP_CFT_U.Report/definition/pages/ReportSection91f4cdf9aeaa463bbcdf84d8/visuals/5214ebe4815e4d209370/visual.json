@@ -86,11 +86,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Matrícula primer año"
+                  "Property": "Regular 1er año"
                 }
               },
-              "queryRef": "_Medidas.Matrícula primer año",
-              "nativeQueryRef": "Matrícula primer año"
+              "queryRef": "_Medidas.Regular 1er año",
+              "nativeQueryRef": "Regular 1er año"
             },
             {
               "field": {
@@ -100,11 +100,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Participación P1 área"
+                  "Property": "Participación Regular P1 área"
                 }
               },
-              "queryRef": "_Medidas.Participación P1 área",
-              "nativeQueryRef": "Participación P1 área"
+              "queryRef": "_Medidas.Participación Regular P1 área",
+              "nativeQueryRef": "Participación Regular P1 área"
             }
           ]
         }

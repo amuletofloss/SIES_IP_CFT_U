@@ -23,11 +23,11 @@
                       "Entity": "DimPlan"
                     }
                   },
-                  "Property": "Grupo de plan"
+                  "Property": "Tipo de plan SIES"
                 }
               },
-              "queryRef": "DimPlan.Grupo de plan",
-              "nativeQueryRef": "Grupo de plan",
+              "queryRef": "DimPlan.Tipo de plan SIES",
+              "nativeQueryRef": "Tipo de plan SIES",
               "active": true
             }
           ]
