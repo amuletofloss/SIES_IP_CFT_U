@@ -8,15 +8,22 @@ El proyecto incluye datos públicos agregados de SIES, un modelo semántico docu
 
 > Este es un proyecto analítico independiente. No es un producto oficial de SIES ni del Ministerio de Educación.
 
+## Novedades de la versión 1.1.0
+
+- Diferencia entre **Área carrera genérica** y **Nombre carrera** informado por cada institución.
+- Duración de estudio y duración total, ambas expresadas en semestres.
+- Navegación jerárquica hasta el nombre exacto de la carrera en las vistas analíticas y de detalle.
+- PBIX portable para abrir el informe con los datos 2023–2026 ya importados.
+
 ## Inicio rápido
 
 ### Solo quiero visualizar el informe
 
-1. Abra la sección **Releases** del repositorio.
-2. Descargue `SIES_IP_CFT_U_v1.0.0.pbix`.
+1. Abra la [última versión publicada](https://github.com/amuletofloss/SIES_IP_CFT_U/releases/latest).
+2. Descargue `SIES_IP_CFT_U_v1.1.0.pbix`.
 3. Ábralo con una versión reciente de Microsoft Power BI Desktop.
 
-El PBIX incluye los datos importados y permite navegar inmediatamente. Para actualizar los CSV deberá configurar el parámetro `pCarpetaDatos` con una carpeta local válida.
+El PBIX incluye los datos importados y permite navegar inmediatamente, aunque los CSV no estén disponibles. Para actualizar los datos use el proyecto PBIP y el procedimiento de la sección siguiente.
 
 ### Quiero editar el proyecto PBIP
 
@@ -46,7 +53,7 @@ El proyecto original conserva una ruta genérica para evitar publicar nombres de
 - Mercado IP+CFT y mercado universitario.
 - Modalidad No Presencial o Semipresencial.
 - Jornadas A Distancia, Diurna, Vespertina, Otra y Semipresencial.
-- Institución, grupo institucional, carrera, área de conocimiento y territorio.
+- Institución, grupo institucional, nombre de carrera, área genérica, duraciones y territorio.
 - Planes Regular, Continuidad y Otros, separados entre total y primer año.
 - Participación, ranking, evolución anual y concentración competitiva.
 - ECS frente al mercado, usando los mismos datos públicos SIES que el resto del informe.
@@ -57,13 +64,13 @@ El proyecto original conserva una ruta genérica para evitar publicar nombres de
 |---|---|
 | 00 Resumen SIES | Indicadores ejecutivos y filtros principales |
 | 01 Mercado IP+CFT | Tamaño, participación y ranking del subsistema técnico-profesional |
-| 02 Mercado universitario | Matrícula total, primer año y continuidad universitaria |
+| 02 Mercado universitario | Universidades por área genérica y nombre de carrera |
 | 03 Planes y continuidad | Regular, Continuidad y Otros, total y primer año |
 | 04 Evolución 2023–2026 | Tendencias anuales por grupo de plan |
 | 05 Portafolio ECS vs mercado | Comparación institucional y áreas de conocimiento |
-| 06 Concentración por área | Distribución de matrícula por área |
+| 06 Concentración por área | Área de conocimiento, área genérica y nombre de carrera |
 | 07 Mapa competitivo | Grupos nominados y categorías residuales |
-| 08 Detalle SIES | Matriz de consulta detallada |
+| 08 Detalle SIES | Nombre de carrera y duraciones de estudio y total |
 | 09 Glosario y metodología | Definiciones, reglas y clasificación competitiva |
 
 Todas las páginas analíticas incluyen filtros por **Año, Modalidad, Jornada, Grupo de plan y Subgrupo**.
@@ -112,27 +119,14 @@ SIES_IP_CFT_U/
 4. Revise las conciliaciones descritas en [docs/VALIDACION.md](docs/VALIDACION.md).
 5. Ejecute `.\scripts\Validar-Privacidad.ps1` antes de cualquier publicación.
 
-## Publicar en GitHub
+## Publicar una nueva versión
 
-1. Cree en GitHub un repositorio público vacío llamado `SIES_IP_CFT_U`, sin agregar automáticamente README ni licencia.
-2. Configure una identidad institucional de Git para evitar publicar un correo personal.
-3. Desde esta carpeta ejecute:
-
-```powershell
-.\scripts\Validar-Privacidad.ps1
-git init -b main
-git add .
-git status
-git commit -m "Publicación inicial SIES_IP_CFT_U v1.0.0"
-git remote add origin https://github.com/ORGANIZACION/SIES_IP_CFT_U.git
-git push -u origin main
-```
-
-4. Sustituya `ORGANIZACION` por la cuenta institucional correspondiente.
-5. Revise en GitHub que la imagen de portada, los enlaces y las licencias se visualicen correctamente.
-6. Cree la Release `v1.0.0`, copie el contenido de `RELEASE_NOTES_v1.0.0.md` y adjunte el PBIX generado localmente.
-
-Antes de `git add`, confirme que `git status` no muestre ningún archivo PBIX, Excel, PowerPoint, `.local` o caché `.pbi`.
+1. Actualice y valide el PBIP público.
+2. Genere el PBIX con Power BI Desktop y guárdelo en `release-assets/`.
+3. Ejecute `scripts/Validar-Privacidad.ps1 -IncluirBinarios`.
+4. Registre el tamaño y SHA-256 del PBIX en las notas de versión.
+5. Confirme que `git status` no incluya el PBIX, `.local`, Excel, PowerPoint ni cachés `.pbi`.
+6. Publique el código mediante Git y adjunte el PBIX como activo de GitHub Releases.
 
 ## Licencias y atribución
 

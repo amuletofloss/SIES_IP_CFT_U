@@ -7,7 +7,7 @@
 | `fact_matricula.csv` | Hechos agregados de matrícula | Año, institución, carrera, modalidad, jornada, plan, territorio, total y primer año |
 | `dim_anio.csv` | Años disponibles | Año |
 | `dim_institucion.csv` | Instituciones y agrupaciones | ID, nombre, grupo, tipo, acreditación y segmento competitivo |
-| `dim_carrera.csv` | Carreras y clasificaciones académicas | ID, nombre, área, CINE y acreditación |
+| `dim_carrera.csv` | Carreras y clasificaciones académicas | ID, nombre, área genérica, CINE, duraciones y acreditación |
 | `dim_modalidad.csv` | Modalidades incluidas | Modalidad |
 | `dim_jornada.csv` | Jornadas incluidas | Jornada |
 | `dim_plan.csv` | Taxonomía de planes | Tipo SIES, grupo, subgrupo y orden |
@@ -34,6 +34,15 @@ Las columnas numéricas son:
 - `PrimerAnio`: matrícula agregada de primer año.
 
 No contiene registros de personas.
+
+## Dimensión de carreras
+
+- `NombreCarrera`: nombre textual informado por la institución; no está normalizado.
+- `AreaCarreraGenerica`: clasificación normalizada SIES que agrupa nombres de carreras relacionados.
+- `DuracionEstudio`: semestres de estudio informados por SIES.
+- `DuracionTotal`: semestres totales informados por SIES; puede incluir una etapa adicional.
+
+Las duraciones son atributos enteros no sumables. La jerarquía visible del modelo es **Área carrera genérica > Nombre carrera**.
 
 ## Medidas DAX
 
@@ -75,4 +84,3 @@ No contiene registros de personas.
 ## Relaciones principales
 
 La tabla `FactMatricula` se relaciona en dirección de filtro simple con las dimensiones de año, institución, carrera, modalidad, jornada y plan. Las tablas de glosario, auditoría y clasificación competitiva son tablas de consulta independientes.
-

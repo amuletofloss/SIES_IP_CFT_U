@@ -1,6 +1,6 @@
 # Validación de la versión pública
 
-Fecha base: 24-09-2026.
+Fecha base: 29-09-2026.
 
 ## Resultado de esta entrega
 
@@ -15,8 +15,10 @@ Fecha base: 24-09-2026.
 - Diez páginas reconocidas por Power BI Desktop.
 - Modelo actualizado con 4.463 filas de hechos.
 - 4 años, 69 instituciones, 2 modalidades, 5 jornadas y 3 tipos SIES de plan.
-- 21 términos públicos de glosario después de retirar la referencia interna a la presentación.
+- 25 términos públicos de glosario, sin referencias internas.
 - 50 registros de auditoría y 39 grupos en el catálogo competitivo.
+- 4.463 códigos de carrera con nombre, área genérica y ambas duraciones informadas.
+- 498 códigos donde la duración de estudio y la duración total son diferentes.
 
 ## Totales 2026
 

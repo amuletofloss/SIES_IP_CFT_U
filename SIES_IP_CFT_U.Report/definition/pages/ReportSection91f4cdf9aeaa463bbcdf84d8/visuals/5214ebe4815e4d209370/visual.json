@@ -38,11 +38,26 @@
                       "Entity": "DimCarrera"
                     }
                   },
-                  "Property": "Carrera"
+                  "Property": "Área carrera genérica"
                 }
               },
-              "queryRef": "DimCarrera.Carrera",
-              "nativeQueryRef": "Carrera",
+              "queryRef": "DimCarrera.Área carrera genérica",
+              "nativeQueryRef": "Área carrera genérica",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarrera"
+                    }
+                  },
+                  "Property": "Nombre carrera"
+                }
+              },
+              "queryRef": "DimCarrera.Nombre carrera",
+              "nativeQueryRef": "Nombre carrera",
               "active": false
             }
           ]

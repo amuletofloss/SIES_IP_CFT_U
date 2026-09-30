@@ -107,8 +107,8 @@ table _Medidas
 		formatString: 0.0%
 		lineageTag: 8c684284-66e0-42c1-8dd6-1f80ad7260c8
 
-	/// Concentración de primer año por área.
-	measure 'Participación P1 área' = DIVIDE([Matrícula primer año], CALCULATE([Matrícula primer año], ALL(DimCarrera[Área del conocimiento])))
+	/// Participación de primer año del nivel visible en el mercado filtrado.
+	measure 'Participación P1 área' = DIVIDE([Matrícula primer año], CALCULATE([Matrícula primer año], REMOVEFILTERS(DimCarrera[Área del conocimiento], DimCarrera[Área carrera genérica], DimCarrera[Nombre carrera])))
 		formatString: 0.0%
 		lineageTag: 70f48c6d-7bfb-4468-8138-df9c0a995f28
 

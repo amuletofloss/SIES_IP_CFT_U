@@ -29,6 +29,36 @@
               "queryRef": "DimInstitucion.Grupo institución",
               "nativeQueryRef": "Grupo institución",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarrera"
+                    }
+                  },
+                  "Property": "Área carrera genérica"
+                }
+              },
+              "queryRef": "DimCarrera.Área carrera genérica",
+              "nativeQueryRef": "Área carrera genérica",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarrera"
+                    }
+                  },
+                  "Property": "Nombre carrera"
+                }
+              },
+              "queryRef": "DimCarrera.Nombre carrera",
+              "nativeQueryRef": "Nombre carrera",
+              "active": true
             }
           ]
         },
@@ -106,8 +136,55 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Matrícula primer año universidades"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "DimInstitucion.Grupo institución"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DimCarrera.Área carrera genérica"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DimCarrera.Nombre carrera"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "columnHeaders": [
         {
@@ -128,7 +205,188 @@
             }
           }
         }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "455D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DimInstitucion.Grupo institución"
+          }
+        }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5b4ff2bd43b0b2946883",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimCarrera"
+              }
+            },
+            "Property": "Nombre carrera"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1b325fd0c988978b0850",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimInstitucion"
+              }
+            },
+            "Property": "Tipo institución"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DimInstitucion",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Tipo institución"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'U'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "9cfe730f00990900ce35",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Continuidad 1er año universidades"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7b44880d908d2a40a7a5",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Continuidad Total universidades"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "478bb92165d30c9a249b",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimInstitucion"
+              }
+            },
+            "Property": "Grupo institución"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "02182da2875470003e84",
+        "ordinal": 5,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Matrícula primer año universidades"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9150dc35835bb1b5aa84",
+        "ordinal": 6,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Matrícula total universidades"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "19321f8da6e34920945e",
+        "ordinal": 7,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Participación P1"
+          }
+        },
+        "type": "Advanced"
+      }
+    ],
+    "filterSortOrder": "Custom"
   }
 }

@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Detalle trazable por institución, carrera, modalidad, jornada y plan",
+                    "value": "Detalle por institución, área genérica, nombre de carrera y duración",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "12px",

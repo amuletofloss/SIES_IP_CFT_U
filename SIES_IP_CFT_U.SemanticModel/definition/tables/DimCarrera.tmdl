@@ -14,17 +14,23 @@ table DimCarrera
 		summarizeBy: none
 		sourceColumn: CarreraID
 
-	column Carrera
+	column 'Nombre carrera'
 		dataType: string
 		lineageTag: 07fbb865-6532-443b-9ad8-bea45d98421d
 		summarizeBy: none
-		sourceColumn: Carrera
+		sourceColumn: NombreCarrera
 
 	column 'Área del conocimiento'
 		dataType: string
 		lineageTag: bcb8ff5e-a4e3-40a2-b434-2799d9f9a2be
 		summarizeBy: none
 		sourceColumn: AreaConocimiento
+
+	column 'Área carrera genérica'
+		dataType: string
+		lineageTag: 44f7dc5e-1f68-40c7-a9cc-51c25f1c4f35
+		summarizeBy: none
+		sourceColumn: AreaCarreraGenerica
 
 	column 'CINE-F 2013 área'
 		dataType: string
@@ -50,11 +56,36 @@ table DimCarrera
 		summarizeBy: none
 		sourceColumn: ClasificacionCarrera2
 
+	column 'Duración estudio (semestres)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4db1a375-2923-41b2-b5a3-a7611a0dc03f
+		summarizeBy: none
+		sourceColumn: DuracionEstudio
+
+	column 'Duración total (semestres)'
+		dataType: int64
+		formatString: 0
+		lineageTag: bcfb4782-7f1c-433a-9410-42c6a49ed417
+		summarizeBy: none
+		sourceColumn: DuracionTotal
+
 	column 'Acreditación carrera'
 		dataType: string
 		lineageTag: 5a407289-2b16-4b37-8c9e-c851356f03b4
 		summarizeBy: none
 		sourceColumn: AcreditacionCarrera
+
+	hierarchy 'Área genérica > nombre carrera'
+		lineageTag: 48fd38e2-2cf3-47ba-a93e-d7e4852cfdd1
+
+		level 'Área carrera genérica'
+			lineageTag: 34ebaa59-61af-4dfc-aa65-095c2ee74dca
+			column: 'Área carrera genérica'
+
+		level 'Nombre carrera'
+			lineageTag: 516d7f91-90e4-44a7-901b-ad99aed373d8
+			column: 'Nombre carrera'
 
 	partition Source = m
 		mode: import
@@ -65,12 +96,15 @@ table DimCarrera
 					Typed = Table.TransformColumnTypes(Promoted, {
 					{"CarreraKey", type text},
 					{"CarreraID", type text},
-					{"Carrera", type text},
+					{"NombreCarrera", type text},
 					{"AreaConocimiento", type text},
+					{"AreaCarreraGenerica", type text},
 					{"Cine2013Area", type text},
 					{"Cine2013Subarea", type text},
 					{"ClasificacionCarrera1", type text},
 					{"ClasificacionCarrera2", type text},
+					{"DuracionEstudio", Int64.Type},
+					{"DuracionTotal", Int64.Type},
 					{"AcreditacionCarrera", type text}
 					}, "es-CL")
 				in
